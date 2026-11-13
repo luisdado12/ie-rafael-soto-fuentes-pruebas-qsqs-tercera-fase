@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b32">
+  <meta name="description" content="Aplicativo de práctica de las pruebas QSQS, tercera fase, organizado por grado y área.">
+  <title>IE Rafael Soto Fuentes | Pruebas QSQS tercera fase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación de grados">
+      <a class="brand" href="#inicio" aria-label="Inicio QSQS">
+        <span class="brand-mark">QS</span>
+        <span class="brand-copy"><strong>QSQS</strong><small>Aprender haciendo</small></span>
+      </a>
+      <div class="side-label">ELIGE TU GRADO</div>
+      <nav id="grade-nav" class="grade-nav"></nav>
+      <div class="sidebar-bottom">
+        <span class="online-dot"></span>
+        <span>Tu avance queda guardado<br><strong>en este dispositivo</strong></span>
+      </div>
+    </aside>
+
+    <main id="main" class="main-area">
+      <header class="topbar">
+        <div class="crumb"><span>IE Rafael Soto Fuentes</span><span class="crumb-slash">/</span><strong>Pruebas QSQS</strong></div>
+        <button id="help-button" class="help-button" type="button" aria-label="Información sobre la aplicación">?</button>
+      </header>
+      <section id="content" class="content" aria-live="polite">
+        <div class="loading-card">Cargando las pruebas…</div>
+      </section>
+      <footer class="footer"><span>Institución Educativa Rafael Soto Fuentes</span><span>Quiero ser, quiero saber · Tercera fase</span></footer>
+    </main>
+  </div>
+  <dialog id="help-dialog" class="help-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Cerrar">×</button></form>
+    <div class="eyebrow">ANTES DE EMPEZAR</div>
+    <h2>Practica a tu ritmo</h2>
+    <p>Selecciona tu grado y un área. Lee cada situación, responde y usa los filtros para volver a las preguntas que quieras revisar. Tus respuestas se guardan en este dispositivo.</p>
+    <div class="notice"><strong>Sobre la calificación</strong><br>La base entregada no trae una clave validada. Por eso el aplicativo guarda tus respuestas, pero no marca aciertos ni calcula una nota. En Socioemocional, cada respuesta es personal.</div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>

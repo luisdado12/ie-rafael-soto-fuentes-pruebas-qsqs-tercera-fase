@@ -1,0 +1,5 @@
+/app_offline/
+/output/
+/tmp/
+/app-offline*.zip
+/.DS_Store
