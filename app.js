@@ -174,7 +174,7 @@ function updateProgress() {
 }
 async function init() {
   try {
-    const [response, keyResponse] = await Promise.all([fetch("data/questions.json"), fetch("data/answer-key.json")]);
+    const [response, keyResponse] = await Promise.all([fetch("data/questions.json?v=11a83d0"), fetch("data/answer-key.json?v=11a83d0")]);
     if (!response.ok) throw new Error(`Preguntas: HTTP ${response.status}`);
     if (!keyResponse.ok) throw new Error(`Clave: HTTP ${keyResponse.status}`);
     [exams, answerKeys] = await Promise.all([response.json(), keyResponse.json()]);
