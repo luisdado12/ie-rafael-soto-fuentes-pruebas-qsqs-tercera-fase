@@ -14,7 +14,7 @@ No necesita servidor ni instalación: usa HTML, CSS y JavaScript. Para probarlo 
 
 El archivo `data/questions.json` se generó desde la base SQLite suministrada en el espacio de trabajo. Las imágenes citadas por los enunciados están en `assets/images/`.
 
-El material recibido no identifica respuestas correctas: el campo de puntaje de las 1.796 opciones es `0`. Por eso la aplicación guarda respuestas y progreso en el navegador, pero no calcula una nota ni revela claves no verificadas. Las preguntas socioemocionales se presentan como reflexión.
+El material recibido no identifica respuestas correctas: el campo de puntaje de las 1.796 opciones es `0`. Se añadió `data/answer-key.json` con una clave de práctica elaborada al resolver los enunciados y revisar los textos e imágenes de los cuadernillos. Cada respuesta correcta de Lenguaje y Matemáticas suma un punto y muestra una explicación; la clave es independiente y no oficial. En Matemáticas de 5.º, pregunta 15, y de 7.º, preguntas 2 y 5, se aceptan las alternativas válidas debido a ambigüedad. En Lenguaje de 3.º hay una pregunta que no se califica porque falta el afiche al que se refiere. Socioemocionales se guarda para reflexionar y no suma puntos, porque son respuestas personales sin una única opción correcta.
 
 Si se actualiza la base de datos, regenera preguntas y recursos con el PHP incluido:
 
@@ -22,4 +22,4 @@ Si se actualiza la base de datos, regenera preguntas y recursos con el PHP inclu
 php scripts/export_questions.php "ruta\a\sqlite-superate.db" .
 ```
 
-Los datos de avance se guardan únicamente en `localStorage` del navegador del estudiante; no se envían a una base central.
+Los datos de avance y puntaje se guardan únicamente en `localStorage` del navegador del estudiante; no se envían a una base central.
